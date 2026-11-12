@@ -1,0 +1,329 @@
+@font-face {
+  font-family: 'SackersGothicStd';
+  src: url('/fonts/SackersGothicStd-Light.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SackersGothicStd';
+  src: url('/fonts/SackersGothicStd-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SackersGothicStd';
+  src: url('/fonts/SackersGothicStd-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+} 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-primary: #0F1722;
+  --bg-secondary: #F4F4F5;
+  --accent-gold: #8A734D;
+  --accent-gold-hover: #6e5b3c;
+  --text-dark: #1A1A1A;
+  --text-light: #F4F4F5;
+  --font-serif: 'SackersGothicStd', sans-serif;
+  --font-sans: 'Roboto', sans-serif;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;
+  color: var(--text-dark);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--bg-primary);
+  color: var(--accent-gold);
+  padding: 1.25rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#firm-name {
+  font-family: 'SackersGothicStd', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.05em; 
+  text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent-gold);
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+a:hover,
+a:focus-visible {
+  opacity: 0.75;
+}
+
+#menu-toggle {
+  background-color: var(--accent-gold);
+  color: var(--text-light);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border-radius: 2px;
+  transition: background-color 0.2s ease;
+}
+
+#menu-toggle:hover {
+  background-color: var(--accent-gold-hover);
+}
+
+#hero {
+  background-color: var(--bg-secondary);
+  color: var(--text-dark);
+  display: flex;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+#hero-content {
+  width: 50%;
+  height: 100%;
+  padding: 3rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.25rem;
+  text-align: left;
+}
+
+#hero-content h2 {
+  font-family: var(--font-serif);
+  color: var(--bg-primary);
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+#hero-content p {
+  color: #4A4A4A;
+  font-size: 1rem;
+  line-height: 1.5;
+  max-width: 500px;
+}
+
+#hero-button {
+  background-color: var(--accent-gold);
+  color: var(--text-light);
+  border: none;
+  padding: 0.8rem 1.8rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-radius: 2px;
+  margin-top: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+#hero-button:hover {
+  background-color: var(--accent-gold-hover);
+}
+
+#hero-img {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 45%;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  #hero {
+    height: auto;
+    flex-direction: column-reverse;
+  }
+
+  #hero-content,
+  #hero-img {
+    width: 100%;
+  }
+
+  #hero-content {
+    padding: 3rem 1.5rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  #hero-img {
+    height: 320px;
+  }
+}
+
+#container-estadisticas {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background-color: var(--bg-primary);
+  color: var(--text-light);
+  border-top: 1px solid rgba(138, 115, 77, 0.2);
+}
+
+.estadistica {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  text-align: center;
+}
+
+.estadistica-numero {
+  font-family: var(--font-serif);
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.estadistica-texto {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--text-light);
+  opacity: 0.9;
+  max-width: 280px;
+}
+
+@media (max-width: 768px) {
+  #container-estadisticas {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 3rem 1.5rem;
+  }
+
+  .estadistica-numero {
+    font-size: 3.5rem;
+  }
+}
+
+#servicios {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 5rem 2rem;
+  background-color: #f5f5f5; /* Fondo general de la página */
+  flex-wrap: wrap;
+}
+
+.cards-servicios {
+  background-color: #F4F4F5; /* Tono gris claro elegante */
+  background-color: #ffffff; /* Si prefieres el fondo blanco puro de las tarjetas */
+  width: 100%;
+  max-width: 350px;
+  padding: 2.5rem 2rem;
+  border-radius: 20px; /* Bordes redondeados pronunciados como en Figma */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Sombra suave */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cards-servicios:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.cards-servicios .material-symbols-outlined {
+  background-color: #f0f0f2; /* Fondo circular sutil */
+  color: var(--text-dark);
+  font-size: 24px;
+  padding: 1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.cards-servicios h2 {
+  font-family: var(--font-serif);
+  color: var(--text-dark);
+  font-size: 1.25rem;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.cards-servicios p {
+  color: #555555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Responsividad para móviles */
+@media (max-width: 900px) {
+  #servicios {
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1.5rem;
+  }
+
+  .cards-servicios {
+    max-width: 100%;
+  }
+}
